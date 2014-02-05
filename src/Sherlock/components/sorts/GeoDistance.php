@@ -32,7 +32,7 @@ class GeoDistance extends components\BaseComponent implements components\SortInt
     {
         $ret = array(
             '_geo_distance' => array(
-                $this->params['name'] => array($this->params['lon'], $this->params['lat']),
+                $this->params['name'] => $this->params['lat'].','.$this->params['lon'],
                 'order'           => $this->params["order"],
                 'unit' => $this->params["unit"]
             )
